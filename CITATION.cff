@@ -1,14 +1,14 @@
 cff-version: 1.2.0
-title: "qtemplate"
+title: "k8s"
 message: "If you use this software, please cite it as below."
 authors:
   - family-names: "Porter"
     given-names: "Matthew A."
     orcid: "https://orcid.org/0000-0002-0302-4812"
     affiliation: "Qompass AI"
-version: "v2025-05-10"
-date-released: "2025-05-10"
-repository-code: "https://github.com/qompassai/qtemplate"
+version: "v2025-05-12"
+date-released: "2025-05-12"
+repository-code: "https://github.com/qompassai/k8s"
 license: "Q-CDA-1.0"
 keywords:
   - AI
@@ -18,4 +18,4 @@ keywords:
   - Quantum
   - opensource
   - software
-abstract: "Qompass AI repo template"
+abstract: "Qompass AI on K8s"
