@@ -18,6 +18,6 @@ jobs:
       - uses: DeterminateSystems/nix-installer-action@main
       - uses: DeterminateSystems/flakehub-push@main
         with:
-          name: qompassai/k8s  # Auto-generate org/repo-name format
+          name: qompassai/k8s
           rolling: true
           visibility: public
