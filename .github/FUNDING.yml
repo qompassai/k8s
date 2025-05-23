@@ -1,9 +1,9 @@
-# ~/.GH/Qompass/k8s/.github/FUNDING.yml
-# -------------------------------------
+# ~/FUNDING.yml
+# -------------
 # Copyright (C) 2025 Qompass AI, All rights reserved
 
-github: [phaedrusflow]
+github: phaedrusflow
+liberapay: qompassai
 patreon: qompassai
 open_collective: qompassai
 custom: ["https://www.buymeacoffee.com/phaedrusflow"]
-
