@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "k8s"
+title: "Qompass AI on "k8s" (Kubernetes)"
 message: "If you use this software, please cite it as below."
 authors:
   - family-names: "Porter"
@@ -16,6 +16,6 @@ keywords:
   - Healthcare
   - Post-Quantum Cryptography
   - Quantum
-  - opensource
-  - software
+  - k8s
+  - kubernetes
 abstract: "Qompass AI on K8s"
