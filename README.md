@@ -3,6 +3,7 @@
 <h3> Qompass AI on K8s </h3>
 
 ![Repository Views](https://komarev.com/ghpvc/?username=qompassai-k8s)
+![GitHub all releases](https://img.shields.io/github/downloads/qompassai/k8s/total?style=flat-square)
 
   <a href="https://kubernetes.io/"><img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes"></a>
 <br>
