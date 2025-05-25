@@ -1,3 +1,7 @@
+<!-- /qompassai/k8s/README.md -->
+<!-- ---------------------------- -->
+<!-- Copyright (C) 2025 Qompass AI, All rights reserved -->
+
 <h2> K8S (aka Kubernates) </h2>
 
 <h3> Qompass AI on K8s </h3>
