@@ -9,6 +9,7 @@
 ![Repository Views](https://komarev.com/ghpvc/?username=qompassai-k8s)
 ![GitHub all releases](https://img.shields.io/github/downloads/qompassai/k8s/total?style=flat-square)
 
+<p align="center">
   <a href="https://kubernetes.io/"><img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes"></a>
 <br>
 <a href="https://kubernetes.io/docs/home/"><img src="https://img.shields.io/badge/Kubernetes_Documentation-blue?style=flat-square" alt="Kubernetes Documentation"></a>
@@ -39,7 +40,6 @@ bash <(curl -L https://raw.githubusercontent.com/qompassai/dotfiles/main/scripts
 # Qompass AI Quick Start Script
 # Copyright (C) 2025 Qompass AI, All rights reserved
 ####################################################
-
 REPO="https://github.com/qompassai/dotfiles"
 TARGET_DIR="$HOME/.dotfiles"
 if [ -d "$TARGET_DIR" ]; then
@@ -246,14 +246,14 @@ $$
 z = \\sum\_{i=1}^{n} w_ix_i + b
 $$
 $$
-a = \\sigma(z)
+a = \sigma(z)
 $$
 
 Where:
 
 - $z$ is the weighted sum plus bias
 - $a$ is the activation output
-- $\\sigma$ is the activation function
+- $\sigma$ is the activation function
 
 ### Attention Mechanism- aka what makes the Transformer (The "T" in ChatGPT) powerful
 
@@ -264,7 +264,7 @@ Where:
 The Attention mechanism equation is:
 
 $$
-\\text{Attention}(Q, K, V) = \\text{softmax}\\left( \\frac{QK^T}{\\sqrt{d_k}} \\right) V
+\\text{Attention}(Q, K, V) = \text{softmax}\\left( \\frac{QK^T}{\\sqrt{d_k}} \\right) V
 $$
 
 Where:
@@ -273,7 +273,7 @@ Where:
 - $K$ represents the Key matrix
 - $V$ represents the Value matrix
 - $d_k$ is the dimension of the key vectors
-- $\\text{softmax}(\\cdot)$ normalizes scores to sum to 1
+- $\text{softmax}(\cdot)$ normalizes scores to sum to 1
 
 ### Q: Do I have to buy a Linux computer to use this? I don't have time for that!
 
