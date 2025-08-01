@@ -1,6 +1,7 @@
-<!-- /qompassai/k8s/README.md -->
-<!-- ---------------------------- -->
+<!----------------/qompassai/k8s/README.md ---------------->
+<!-- --------------- Qompass AI K8s ----------------------->
 <!-- Copyright (C) 2025 Qompass AI, All rights reserved -->
+<!-------------------------------------------------------->
 
 <h2> K8S (aka Kubernates) </h2>
 
@@ -18,85 +19,6 @@
   <a href="https://www.gnu.org/licenses/agpl-3.0"><img src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" alt="License: AGPL v3"></a>
   <a href="./LICENSE-QCDA"><img src="https://img.shields.io/badge/license-Q--CDA-lightgrey.svg" alt="License: Q-CDA"></a>
 </p>
-
-<details>
-  <summary style="font-size: 1.4em; font-weight: bold; padding: 15px; background: #667eea; color: white; border-radius: 10px; cursor: pointer; margin: 10px 0;">
-    <strong>▶️ Qompass AI Quick Start</strong>
-  </summary>
-  <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; margin-top: 10px; font-family: monospace;">
-
-```bash
-bash <(curl -L https://raw.githubusercontent.com/qompassai/dotfiles/main/scripts/quickstart.sh)
-```
-  </div>
-  <blockquote style="font-size: 1.2em; line-height: 1.8; padding: 25px; background: #f8f9fa; border-left: 6px solid #667eea; border-radius: 8px; margin: 15px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-    <details>
-      <summary style="font-size: 1em; font-weight: bold; padding: 10px; background: #e9ecef; color: #333; border-radius: 5px; cursor: pointer; margin: 10px 0;">
-        <strong>📄 We advise you read the script BEFORE running it 😉</strong>
-      </summary>
-      <pre style="background: #fff; padding: 15px; border-radius: 5px; border: 1px solid #ddd; overflow-x: auto;">
-#!/usr/bin/env bash
-# /qompassai/dotfiles/scripts/quickstart.sh
-# Qompass AI Quick Start Script
-# Copyright (C) 2025 Qompass AI, All rights reserved
-####################################################
-REPO="https://github.com/qompassai/dotfiles"
-TARGET_DIR="$HOME/.dotfiles"
-if [ -d "$TARGET_DIR" ]; then
-    echo "Removing existing dotfiles directory..."
-    rm -rf "$TARGET_DIR"
-fi
-echo "Cloning Qompass AI Dotfiles..."
-git clone "$REPO" "$TARGET_DIR"
-echo "Setting up symlinks..."
-mkdir -p "$HOME/.config/nix" "$HOME/.profile.d"
-ln -sf "$TARGET_DIR/.config/nix/nix.conf" "$HOME/.config/nix/nix.conf"
-ln -sf "$TARGET_DIR/.profile.d/67-nix.sh" "$HOME/.profile.d/67-nix.sh"
-mkdir -p "$HOME/.config"
-ln -sfn "$TARGET_DIR/home" "$HOME/.config/home" 2>/dev/null || true
-ln -sfn "$TARGET_DIR/.local" "$HOME/.local" 2>/dev/null || true
-ln -sf "$TARGET_DIR/flake.nix" "$HOME/.config/flake.nix" 2>/dev/null || true
-source "$HOME/.profile.d/67-nix.sh" 2>/dev/null || {
-    echo "WARNING: Could not source Nix profile configuration. Falling back to manual exporting"
-    export NIX_CONF_DIR="$HOME/.config/nix"
-    export NIX_STORE_DIR="$HOME/.nix/store"
-    export NIX_STATE_DIR="$HOME/.local/state/nix"
-    export NIX_LOG_DIR="$HOME/.local/state/nix/log"
-    export NIX_PROFILE_DIR="$HOME/.nix-profile"
-    export PATH="$NIX_PROFILE_DIR/bin:$PATH"
-}
-if ! command -v nix >/dev/null; then
-    echo "Installing Nix with custom configuration..."
-    mkdir -p /.nix/var/nix/{profiles,gcroots,db}
-    chown -R "$(whoami)" /.nix
-    sh <(curl -L https://nixos.org/nix/install) --daemon \
-        --nix-extra-conf-file "$NIX_CONF_DIR/nix.conf"
-    if [ -f '/.nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-        . '/.nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-    fi
-fi
-echo "Setting up Nix environment..."
-cd "$TARGET_DIR"
-nix flake update
-detect_shell() {
-    case "$(ps -p $$ -o comm=)" in
-        *bash*) echo "bash" ;;
-        *zsh*)  echo "zsh" ;;
-        *fish*) echo "fish" ;;
-        *)      echo "bash" ;;
-    esac
-}
-USER_SHELL=$(detect_shell)
-echo "Detected shell: $USER_SHELL"
-nix develop --command "$USER_SHELL"
-      </pre>
-    </details>
-    <p>Or, <a href="https://github.com/qompassai/dotfiles/blob/main/scripts/quickstart.sh" target="_blank">View the quickstart script</a>.</p>
-  </blockquote>
-</details>
-
-</blockquote>
-</details>
 
 <details>
 <summary style="font-size: 1.4em; font-weight: bold; padding: 15px; background: #667eea; color: white; border-radius: 10px; cursor: pointer; margin: 10px 0;"><strong>🧭 About Qompass AI</strong></summary>
@@ -196,7 +118,7 @@ nix develop --command "$USER_SHELL"
 **Monero (XMR):**
 
 <div align="center">
-  <img src="./assets/monero-qr.png" alt="Monero QR Code" width="180">
+  <img src="https://raw.githubusercontent.com/qompassai/svg/main/assets/monero-qr.svg" alt="Monero QR Code" width="180">
 </div>
 
 <div style="margin: 10px 0;">
@@ -243,7 +165,7 @@ Where:
 For neural networks, the bias term is incorporated before activation:
 
 $$
-z = \\sum\_{i=1}^{n} w_ix_i + b
+z = \sum_{i=1}^{n} w_ix_i + b
 $$
 $$
 a = \sigma(z)
@@ -264,7 +186,7 @@ Where:
 The Attention mechanism equation is:
 
 $$
-\\text{Attention}(Q, K, V) = \text{softmax}\\left( \\frac{QK^T}{\\sqrt{d_k}} \\right) V
+Attention(Q, K, V) = softmax(\frac{QK^T}{\sqrt{d_k}})V
 $$
 
 Where:
